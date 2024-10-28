@@ -48,4 +48,26 @@ public class CSharp11Features
     Console.WriteLine();
   }
 
+  public void ListPatterns()
+  {
+    Console.WriteLine("Testing List Patterns....");
+
+    int[] numbers = [1, 2, 3];
+    if (numbers is [1, 2, 3])
+    {
+      Console.WriteLine($"Match! {string.Join(',', numbers)}");
+    }
+
+    string[] names = ["John", "Doe"];
+    if (names is ["John", "Wayne"])
+    {
+      Console.WriteLine($"Match! {string.Join(',', names)}");
+    }
+    else
+    {
+      Console.WriteLine($"No Match! {string.Join(',', names)}");
+    }
+
+    Console.WriteLine();
+  }
 }
