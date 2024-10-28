@@ -2,10 +2,12 @@ public class CSharp11Features
 {
   public void RawStringLiterals()
   {
+    var age = 43;
     // Raw String iterals
-    var json = """
+    var json = $$"""
     {
-      "name":"John"
+      "name":"John",
+      "age": {{{age}}},
     }
     """;
 
