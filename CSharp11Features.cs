@@ -1,3 +1,5 @@
+using System.Numerics;
+
 public class CSharp11Features
 {
   public void RawStringLiterals()
@@ -28,4 +30,22 @@ public class CSharp11Features
     Console.WriteLine(person.Age);
     Console.WriteLine();
   }
+
+  public void GenericMath()
+  {
+    Console.WriteLine("Testing Generic Math....");
+
+    var result = GenericMathExample.Add(2, 3);
+    Console.WriteLine(result);
+
+    var result2 = GenericMathExample.Add(new BigInteger(2), new BigInteger(3));
+    Console.WriteLine(result2);
+
+    var floatNumber = 2.0f;
+    var result3 = GenericMathExample.Add(2.0, floatNumber);
+    Console.WriteLine(result3);
+
+    Console.WriteLine();
+  }
+
 }
